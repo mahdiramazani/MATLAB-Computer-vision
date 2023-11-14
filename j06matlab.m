@@ -1,5 +1,2 @@
-pic=imread("E://pic/noice_women.jpg");
+pic=imread("E://pic/women-color.jpg");
 mask=fspecial('disk',2);
-imshow(pic);
-figure;
-imshow(imfilter(pic,mask))
