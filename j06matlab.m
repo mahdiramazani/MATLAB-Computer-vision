@@ -32,8 +32,8 @@ mask_sh=fspecial('laplacian',0.5);
 mask_log=fspecial('log',5,1);
 mask_un=fspecial('unsharp');
 imshow(pic_2),title("original");figure
-subplot(1,3,1),imshow(imfilter(pic_2,mask_sh)),title("laplacian")
-subplot(1,3,2),imshow(imfilter(pic_2,mask_log)),title("log")
+subplot(1,3,1),imshow(pic_2-(imfilter(pic_2,mask_sh))),title("laplacian")
+subplot(1,3,2),imshow(pic_2-(imfilter(pic_2,mask_log))),title("log")
 subplot(1,3,3),imshow(imfilter(pic_2,mask_un)),title("unsharp")
 
 
