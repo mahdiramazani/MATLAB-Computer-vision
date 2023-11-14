@@ -22,7 +22,12 @@ figure;
 subplot(2,2,1),imshow(imfilter(pic,mask,3)),title("x");
 subplot(2,2,2),imshow(imfilter(pic,mask,"symmetric")),title("symmetric");
 subplot(2,2,3),imshow(imfilter(pic,mask,"replicate")),title("replicate");
-subplot(2,2,4),imshow(imfilter(pic,mask_2,"circular")),title("");
+subplot(2,2,4),imshow(imfilter(pic,mask_2,"circular")),title("circular");
+
+figure;
+pic_2=imread("E://")
+mask_sh=fspecial('laplacian',0.5);
+subplot(3,1,1),imshow(imfilter(pic,mask_sh))
 
 
 
